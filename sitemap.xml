@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/getting-started-guide.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/best-classes-tier-list.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/boss-guide-common-pitfalls.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/nightreign-coop-multiplayer-guide.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/rune-levelling-fast-guide.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>

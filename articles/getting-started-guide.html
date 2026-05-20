@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Elden Ring Nightreign: A Beginner's Guide</title>
+    <meta name="description" content="New to Elden Ring Nightreign? This beginner guide covers controls, class selection, core objectives, and exactly what to do in your first hours of play.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root { --bg: #0a0a12; --bg2: #12121f; --accent: #c9a84c; --accent2: #4a9eff; --text: #e8e4d9; --text-dim: #9990a0; --border: #2a2a3f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+        .article-header { padding: 60px 24px 40px; text-align: center; }
+        .article-header h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--accent); line-height: 1.2; margin-bottom: 16px; }
+        .article-header .meta { color: var(--text-dim); font-size: 14px; }
+        .article-content { padding: 0 24px 60px; }
+        .article-content h2 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--accent); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .article-content h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 12px; }
+        .article-content p { margin-bottom: 18px; }
+        .article-content ul, .article-content ol { margin: 0 0 18px 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .article-content strong { color: var(--accent2); font-weight: 600; }
+        .article-content em { color: var(--text-dim); }
+        .key-tip { background: var(--bg2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+        .key-tip strong { color: var(--accent); }
+        .inline-link { font-weight: 600; }
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .footer-discord { display: inline-flex; align-items: center; gap: 8px; background: #5865F2; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 24px; border-radius: 4px; margin-bottom: 24px; }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+        @media (max-width: 600px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="best-classes-tier-list.html">Classes</a></li>
+            <li><a href="boss-guide-common-pitfalls.html">Bosses</a></li>
+            <li><a href="nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <h1>Getting Started with Elden Ring Nightreign: A Beginner's Guide</h1>
+        <div class="meta">Beginner Guide &nbsp;&middot;&nbsp; Updated May 2026</div>
+    </div>
+</header>
+
+<article class="article-content">
+<div class="container">
+
+<h2>What Is Elden Ring Nightreign?</h2>
+<p>Elden Ring Nightreign is a roguelike action-RPG spin-off from FromSoftware, built around condensed, high-stakes runs through a dark fantasy world. Where the main Elden Ring game could consume hundreds of hours, Nightreign trims the fat into intense three-to-five hour sessions — each run a self-contained campaign with randomized enemy placement, class-swap mechanics, and escalating boss encounters. You choose a class, push through interconnected areas, and either clear the final boss or die trying. Every death reshuffles the deck.</p>
+
+<p>If that sounds daunting, this guide exists to flatten the learning curve. Below is everything you need to know before your first run.</p>
+
+<h2>Choosing Your Starting Class</h2>
+<p>Nightreign offers a roster of distinct classes, each with unique stat distributions, weapon proficiencies, and passive abilities. Your first instinct might be to grab the class that looks the coolest — resist that. The class you start with shapes your entire run's tactical profile.</p>
+
+<h3>The Four Core Archetypes</h3>
+<ul>
+<li><strong>Warrior</strong> — High strength, heavy weapon damage, slower attacks. The straightforward choice. Best for players who want to read attack animations and punish windows directly.</li>
+<li><strong>Mage</strong> — Low HP, high intelligence scaling, access to ranged spells. Fragile early on but scales hard in the mid-game. Requires careful positioning.</li>
+<li><strong>Rogue</strong> — Balanced stats, fast attacks, access to stealth mechanics. The reactive playstyle — dodge, counter, stay mobile.</li>
+<li><strong>Cleric</strong> — Moderate HP, healing abilities, hybrid faith stat. A support-oriented pick that stays relevant regardless of run length.</li>
+</ul>
+
+<div class="key-tip">
+<strong>Tip:</strong> Don't overthink your first class choice. The class system in Nightreign rewards mastery — a skilled Warrior will outperform a mediocre Mage every time. Pick what feels intuitive and learn its patterns.</div>
+
+<h2>Controls and Combat Basics</h2>
+<p>If you've played any Souls game, Nightreign's controls will feel familiar. Square/X is light attack, Triangle/Y is heavy attack, L1/LB guards or dual-wields depending on setup, and R1/RB triggers your class skill. The critical additions in Nightreign are the <strong>Nightreign Parry</strong> (a precision guard framed just before an enemy attack lands, granting a critical riposte) and the <strong>Co-op Summon</strong> mechanic, which uses the touchpad or share button.</p>
+
+<h3>The Four Golden Rules of Combat</h3>
+<ol>
+<li><strong>Watch, then act.</strong> Every enemy attack has a visual tell and an audio cue. New players rush in. Experienced players wait for the tell.</li>
+<li><strong>Stamina management is survival.</strong> Attacking consumes stamina. Dodging consumes stamina. Blocking consumes stamina. If you spam inputs, you'll find yourself stuck mid-animation with no resource to react — and that is when you die.</li>
+<li><strong>Positioning over rotation.</strong> In groups, your priority is not your damage output — it is your position relative to the enemy. Standing in the wrong spot gets you hit by attacks that weren't even aimed at you.</li>
+<li><strong>Use the environment.</strong> Ledges, pillars, and elevation changes break enemy targeting. Pull enemies toward chokepoints rather than fighting in open arenas.</li>
+</ol>
+
+<h2>What to Do in Your First Run</h2>
+<h3>Step 1 — Find the First Site of Grace</h3>
+<p>As with all Elden Ring titles, Sites of Grace are your safe respawn points. Your very first objective is to locate the initial Site of Grace — usually a short run from the starting area. Don't rush toward it; explore the immediate surroundings. There will be a weapon on a corpse or a ledge. Grab it.</p>
+
+<h3>Step 2 — Spend Runes Immediately</h3>
+<p>Runes are your experience points, and they drop on death — all of them. The moment you earn enough for a meaningful level investment, spend those runes before pushing deeper. Leaving runes unspent is leaving power on the table; a death with 2,000 unspent runes is a catastrophic setback.</p>
+
+<h3>Step 3 — Find a Balanced Weapon</h3>
+<p>Your starting weapon will carry you through the early area, but don't get attached to it until you've found something with a moveset you actually like. Weapons in Nightreign have varying move sets depending on your class affinity. Test everything.</p>
+
+<h3>Step 4 — Learn One Boss Per Run</h3>
+<p>Nightreign is a roguelike. You will die. Accept that. Each death is data — learn one thing per run. A boss's attack pattern, a rune farm location, a hidden shortcut. Progressive knowledge compounds faster than grinding the same easy content over and over.</p>
+
+<h2>Understanding the Night Cycle</h2>
+<p>Nightreign runs operate on a day/night cycle that directly affects enemy aggression and type distribution. During the day, standard enemies are active. At night — signaled by a dramatic visual shift and ambient sound change — elite enemies and minibosses spawn in greater density. Night is high risk, high reward: more runes, better loot, harder fights.</p>
+
+<div class="key-tip">
+<strong>Tip:</strong> If you're struggling mid-run, wait for daybreak before attempting a boss. Your mimic tear or summon will have better uptime, and enemy density around boss arenas drops significantly.</div>
+
+<h2>First Run Checklist</h2>
+<ul>
+<li>Locate the first Site of Grace immediately</li>
+<li>Grab any weapon within sight before progressing</li>
+<li>Spend runes the moment you can afford a level</li>
+<li>Learn the dodge timing — it is the single most impactful skill in the game</li>
+<li>Do not try to fight multiple elite enemies at once in early areas</li>
+<li>Accept that dying is part of the design, not a failure of skill</li>
+<li>Note one new thing per run to carry forward</li>
+</ul>
+
+<h2>Common Beginner Mistakes</h2>
+<h3>Trying to Block Everything</h3>
+<p>New players lean heavily on the guard button. This is understandable but counterproductive. Blocking in Nightreign costs stamina and can be stamina-drained by heavy attacks, leaving you guard-broken and vulnerable. Dodge is always the better default response to fast attacks.</p>
+
+<h3>Ignoring the Class Skill</h3>
+<p>Every class has a dedicated skill on R1/RB with a cooldown. Beginners often forget it exists, relying solely on light and heavy attacks. Your class skill is typically a high-damage or defensive tool with much shorter cooldown than ash-of-war abilities. Use it on every significant engagement.</p>
+
+<h3>Fighting Every Enemy</h3>
+<p>Not every group of enemies needs to be cleared. Nightreign rewards route optimization. If a patrol is optional, has high enemy density, and sits between you and the next grace — skip it. Rune economy is about efficiency as much as volume.</p>
+
+<h2>How to Build a Sustainable Run</h2>
+<p>The most consistent runs share a common thread: they treat the run as a resource management problem, not a combat endurance test. Runes are resources. Rest sites are resources. Cooldown windows are resources. The best players in Nightreign are not the ones who can fight the longest — they are the ones who manage their resources most intelligently.</p>
+
+<p>Take your first five runs slow. Learn the map layout, the boss sequencing, and the rune distribution. By run six, the game will start feeling less like a difficulty spike and more like a rhythm — and that's when Nightreign stops being hard and starts being brilliant.</p>
+
+<p>For more details on class builds and tier rankings, see the <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a>. For rune farming and progression strategies, see the <a class="inline-link" href="rune-levelling-fast-guide.html">Rune & Progression Guide</a>.</p>
+
+</div>
+</article>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">&#127942; Join the Discord</a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.</p>
+    </div>
+</footer>
+
+</body>
+</html>

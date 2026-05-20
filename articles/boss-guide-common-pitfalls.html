@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightreign Boss Guide: How to Beat Every Main Boss</title>
+    <meta name="description" content="Complete boss fight guide for Elden Ring Nightreign. Mechanic breakdowns, common mistakes, safe windows, and strategies for every main boss encounter.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root { --bg: #0a0a12; --bg2: #12121f; --accent: #c9a84c; --accent2: #4a9eff; --text: #e8e4d9; --text-dim: #9990a0; --border: #2a2a3f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+        .article-header { padding: 60px 24px 40px; text-align: center; }
+        .article-header h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--accent); line-height: 1.2; margin-bottom: 16px; }
+        .article-header .meta { color: var(--text-dim); font-size: 14px; }
+        .article-content { padding: 0 24px 60px; }
+        .article-content h2 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--accent); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .article-content h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 12px; }
+        .article-content p { margin-bottom: 18px; }
+        .article-content ul, .article-content ol { margin: 0 0 18px 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .article-content strong { color: var(--accent2); font-weight: 600; }
+        .inline-link { font-weight: 600; }
+
+        .boss-block { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 24px; margin: 28px 0; }
+        .boss-block h3 { color: var(--accent); font-family: 'Cinzel', serif; font-size: 17px; margin-bottom: 8px; }
+        .boss-block .boss-meta { color: var(--text-dim); font-size: 14px; margin-bottom: 12px; font-style: italic; }
+        .phase { background: rgba(201,168,76,0.06); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 12px 0; border-radius: 0 2px 2px 0; }
+        .phase strong { color: var(--accent); }
+        .mistake { color: #c06060; }
+        .mistake strong { color: #c06060; }
+
+        .key-tip { background: var(--bg2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+        .key-tip strong { color: var(--accent); }
+
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .footer-discord { display: inline-flex; align-items: center; gap: 8px; background: #5865F2; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 24px; border-radius: 4px; margin-bottom: 24px; }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+        @media (max-width: 600px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="getting-started-guide.html">Beginner</a></li>
+            <li><a href="best-classes-tier-list.html">Classes</a></li>
+            <li><a href="nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <h1>Nightreign Boss Guide: How to Beat Every Main Boss</h1>
+        <div class="meta">Boss Guide &nbsp;&middot;&nbsp; Updated May 2026</div>
+    </div>
+</header>
+
+<article class="article-content">
+<div class="container">
+
+<h2>How to Use This Guide</h2>
+<p>Every boss in Nightreign is covered here with three things: what each phase does, the most common mistakes players make, and the tactical adjustments that flip the fight. Boss difficulty scales with each run cycle — the boss you fight on Night 1 is mechanically identical to the boss on Night 7, but it has more HP, stronger attack damage, and denser minion spawns. Strategy is identical; execution window is tighter.</p>
+
+<p>The three golden rules before any boss encounter: <strong>patience over aggression</strong>, <strong>learn one phase at a time</strong>, and <strong>always identify the "get off me" tool</strong> — the attack the boss uses to create distance, and how to avoid it before it lands.</p>
+
+<div class="boss-block">
+    <h3>Boss 1 — The Hollow Warden</h3>
+    <div class="boss-meta">Area: The Sunken Cross &nbsp;&middot;&nbsp; Difficulty: Easy &nbsp;&middot;&nbsp; Type: Melee / Strength</div>
+
+    <p>The opening boss of Nightreign. The Warden is a large, armored hollowed knight who moves slowly but hits hard on delayed swing attacks.</p>
+
+    <div class="phase">
+        <strong>Phase 1 (100%–50% HP):</strong> The Warden uses three attacks — a wide horizontal sweep, an overhead slam with a long wind-up, and a guarded charge. All three are dodgeable in the same direction: roll through the swing, not away from it.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 2 (50%–0% HP):</strong> The Warden gains a second attack pattern: a ground-pound shockwave that must be jumped over (timed to coincide with the visual ripple reaching your position). After the shockwave, there is a 1.5-second vulnerability window.
+    </div>
+
+    <p><strong>Common mistake:</strong> Panic-rolling away from the charge attack. The Warden covers significant distance during the charge — backing up does not reliably create space. Roll <em>through</em> the charge and punish the follow-up.</p>
+
+    <p><strong>Strategy:</strong> Stay at medium range, bait the overhead slam, punish the recovery frames. The Warden cannot be reliably staggered during Phase 2, so do not attempt hyper-aggressive trade strategies.</p>
+</div>
+
+<div class="boss-block">
+    <h3>Boss 2 — Sir Gavain, the Oathless</h3>
+    <div class="boss-meta">Area: The Bleeding Hollow &nbsp;&middot;&nbsp; Difficulty: Medium &nbsp;&middot;&nbsp; Type: Dual-wield / Fast</div>
+
+    <p>A knight who dual-wields straight swords. Significantly faster than the Warden. His attacks chain in sequences — two-hit combos followed by a third delayed strike. Players who roll once and immediately attack will get caught by the delayed third hit.</p>
+
+    <div class="phase">
+        <strong>Phase 1:</strong> Standard two-hit chain. Roll the first hit, walk back from the second (not a roll — walking gives you reaction time), punish the end of the sequence.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 2 (60% HP):</strong> Gavain enters a <em>Bloody Stance</em> — his blade gains a red glow, and his attacks apply a bleed buildup. If you accumulate three bleed stacks, you enter a brief rupture state that slows your dodge. Keep a distance when he enters Bloody Stance and watch for the opener, which is always a forward lunging thrust.
+    </div>
+
+    <p><span class="mistake"><strong>Common mistake:</strong> Attacking during his recovery frames without confirming the chain is over. The delayed third hit punishes counterattacks made in anticipation of the sequence ending.</span></p>
+
+    <p><strong>Strategy:</strong> Count the hits. Two hits = walk back and wait. If a third swing comes, roll it. After three swings with no fourth, you have a 2-second window. Any attack that doesn't interrupt him will be guard-broken — use guard BREAK (heavy attack while blocking) to interrupt his chains if you are in a tight spot.</p>
+</div>
+
+<div class="boss-block">
+    <h3>Boss 3 — The Night Keeper</h3>
+    <div class="boss-meta">Area: The Night Altar &nbsp;&middot;&nbsp; Difficulty: Hard &nbsp;&middot;&nbsp; Type: Magic / Summoner</div>
+
+    <p>The first major spike in Nightreign. The Night Keeper commands spectral summons and casts area-denial spells. If you let him control the space, you lose. The fight is about aggressive positioning that denies summon windows.</p>
+
+    <div class="phase">
+        <strong>Phase 1:</strong> The Keeper alternates between a staff slam (AoE magic damage in a radius) and summoning a Wraith Illusion that charges you. The Wraith Illusion has low HP but deals contact damage and knockback. Prioritize killing the Illusion immediately — it scales up damage if left alive too long.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 2 (55% HP):</strong> The Keeper activates <em>Nightreign Pact</em>, which drains ambient energy to boost his spell power and cast speed. During this phase, his staff slam has a secondary explosion 0.8 seconds after the initial impact. The tell: he raises his staff higher before the slam. When you see the raised staff, sprint away.
+    </div>
+
+    <p><strong>Common mistake:</strong> Ignoring the Wraith Illusions and focusing the Keeper directly. Illusions can deal 30–40% of your HP in stacked contact hits. Clear every Illusion within 5 seconds of spawning before resuming primary damage.</p>
+
+    <p><strong>Strategy:</strong> The Keeper cannot cast while moving — his cast animation locks him in place. Every time he begins casting, close the distance aggressively. He will either cancel the cast to dodge (creating a window) or complete the cast and be locked during the follow-through. Either outcome favors you.</p>
+</div>
+
+<div class="boss-block">
+    <h3>Boss 4 — Dorthagor, the Unburnt</h3>
+    <div class="boss-meta">Area: The Ashen Citadel &nbsp;&middot;&nbsp; Difficulty: Hard &nbsp;&middot;&nbsp; Type: Fire / Tank</div>
+
+    <p>A massive demon-type boss with a huge HP pool and devastating fire attacks. This is a stamina management fight — your dodges, blocks, and attacks all cost stamina, and Dorthagor has an infinite-combo potential if he catches you without stamina.</p>
+
+    <div class="phase">
+        <strong>Phase 1:</strong> Fire breath (requires perpendicular sprint to avoid), a sweeping claw attack, and a ground slam that creates fire pillars along the ground. The fire pillars telegraph 0.6 seconds before they erupt — look for the dark ground discolouration.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 2 (60% HP):</strong> Dorthagor enters <em>Blazing Core</em>, which applies a persistent burn DOT if any fire attack touches you. His fire breath now leaves a burning trail on the ground that persists for 4 seconds. Keep moving. Do not stand in any fire.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 3 (30% HP):</strong> Enrage mode. Attack patterns speed up by 20%. Fire breath becomes a 360-degree sweep — only safe position is directly behind him. He will do a single repositioning roar before entering this phase; use that window to get behind him and stay there.
+    </div>
+
+    <p><span class="mistake"><strong>Common mistake:</strong> Blocking the fire breath. Fire damage bypasses a significant portion of block damage reduction in Nightreign. Blocking fire = taking massive chip damage. Dodge all fire attacks; never block them.</span></p>
+
+    <p><strong>Strategy:</strong> Circle left around Dorthagor at mid-range. This positioning naturally puts you behind his left shoulder, which is his blind spot for the claw sweep. Punish every claw miss with two-hit combos.</p>
+</div>
+
+<div class="boss-block">
+    <h3>Boss 5 (Final) — Nightreign Incarnade</h3>
+    <div class="boss-meta">Area: The Erased Throne &nbsp;&middot;&nbsp; Difficulty: Extreme &nbsp;&middot;&nbsp; Type: Mixed / Final Boss</div>
+
+    <p>The culmination of Nightreign's run structure. The Incarnade is a shapeshifting entity that cycles through multiple weapon and spell sets — it effectively fights like three different bosses in sequence. This is the hardest fight in the game.</p>
+
+    <div class="phase">
+        <strong>Phase 1 — The Knight Form:</strong> Resembles Sir Gavain but with higher aggression and longer chains. Four-hit sequences instead of two. The rule is the same: count the hits, wait for the window. The window after a four-hit chain is 2.5 seconds — use it fully.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 2 — The Sorcerer Form (65% HP):</strong> The Incarnade shifts to a floating caster form, raining down homing soul bolts and creating shockwave rings. Sprint in straight lines — the homing bolts have minimal tracking after the first second. The shockwave ring must be jumped, not dodged. After the shockwave ring, she floats stationary for 2 seconds.
+    </div>
+
+    <div class="phase">
+        <strong>Phase 3 — The Berserker Form (30% HP):</strong> Enrage. The Incarnade manifests a massive greatsword and attacks with wide, armor-ignoring swings. Hyper-armor on all attacks — you cannot interrupt her. Only safe strategy is to wait for her long recovery after each three-swing chain and punish with single hits. Do not attempt trades.
+    </div>
+
+    <p><span class="mistake"><strong>Common mistake:</strong> Burning cooldowns and consumables in Phase 1 because it feels manageable. Phase 2 and 3 are where runs end. Every resource you spend in Phase 1 is a resource you don't have in Phase 3. Conserve.</span></p>
+
+    <p><strong>Strategy:</strong> Patience. Every phase. The Incarnade rewards disciplined play and punishes greed. The best runs are ones where you take fewer than five hits across all three phases. Focus on window recognition, not damage output.</p>
+</div>
+
+<h2>General Boss Tips</h2>
+<ul>
+<li><strong>Always go in with a full HP bar.</strong> Never engage a boss while still recovering from a previous fight. If your HP is not full, find a grace or use a healing item first.</li>
+<li><strong>Watch the boss's feet.</strong> Many telegraphs that look like "nothing" are wind-up animations. If the boss shifts weight unexpectedly, treat it as an attack incoming.</li>
+<li><strong>Boss music changes before the fight begins.</strong> If you hear the boss music starting while you are still in the previous area, a fog wall has spawned. Stop, prepare, then advance.</li>
+<li><strong>Equipment matters more than levels.</strong> A level 15 with a +3 weapon and the right rings will outperform a level 20 with a +0 weapon in boss fights. Always upgrade your weapon before a boss attempt.</li>
+<li><strong>Use the Discord.</strong> If you are stuck on a specific boss for more than five attempts, ask in the community channels. Sometimes a single specific tip from an experienced player is worth more than twenty more attempts of trial and error.</li>
+</ul>
+
+<div class="key-tip">
+<strong>Remember:</strong> Every boss in Nightreign has been beaten by thousands of players. If you are dying, it is a mechanics problem, not a stats problem. Review the phase breakdown, identify what killed you, and adjust one thing at a time. Incremental improvement compounds.</div>
+
+<p>For class-specific boss strategies, see the <a class="inline-link" href="best-classes-tier-list.html">Class Tier List</a>. For co-op boss strategies, see the <a class="inline-link" href="nightreign-coop-multiplayer-guide.html">Co-op Guide</a>.</p>
+
+</div>
+</article>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">&#127942; Join the Discord</a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.</p>
+    </div>
+</footer>
+
+</body>
+</html>

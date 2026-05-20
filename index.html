@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Nightreign Guide — Master the Night</title>
+    <meta name="description" content="Your complete guide to Elden Ring Nightreign. Beginner tips, class tier lists, boss strategies, co-op guides, and rune farming. Master the Night update.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root {
+            --bg: #0a0a12;
+            --bg2: #12121f;
+            --accent: #c9a84c;
+            --accent2: #4a9eff;
+            --text: #e8e4d9;
+            --text-dim: #9990a0;
+            --border: #2a2a3f;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent2); }
+        img { max-width: 100%; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* Nav */
+        nav {
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .nav-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            padding: 80px 24px 60px;
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 0%, #1a1a2e 0%, var(--bg) 70%);
+        }
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(32px, 6vw, 56px);
+            font-weight: 900;
+            color: var(--accent);
+            text-shadow: 0 0 40px rgba(201,168,76,0.3);
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border-radius: 2px;
+        }
+        .hero-cta:hover { background: #e0bc5a; color: var(--bg); }
+
+        /* Articles grid */
+        .articles-section { padding: 60px 24px; }
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .article-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .article-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .article-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+        .article-card h3 a { color: var(--text); }
+        .article-card h3 a:hover { color: var(--accent); }
+        .article-card p { color: var(--text-dim); font-size: 15px; flex: 1; margin-bottom: 16px; }
+        .read-more { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* Features */
+        .features { padding: 40px 24px 60px; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 24px;
+        }
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .feature-item h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        .feature-item p { color: var(--text-dim); font-size: 15px; }
+
+        /* Footer */
+        footer {
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .footer-discord {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #5865F2;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 24px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+        }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+
+        @media (max-width: 600px) {
+            nav .nav-links { display: none; }
+            .hero h1 { font-size: 28px; }
+            .articles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="articles/getting-started-guide.html">Beginner</a></li>
+            <li><a href="articles/best-classes-tier-list.html">Classes</a></li>
+            <li><a href="articles/boss-guide-common-pitfalls.html">Bosses</a></li>
+            <li><a href="articles/nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="articles/rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Elden Ring Nightreign Guide<br>Master the Night</h1>
+        <p>The complete field manual for Elden Ring Nightreign — class builds, boss counters, co-op strategies, and rune progression, all in one place.</p>
+        <a href="articles/getting-started-guide.html" class="hero-cta">Start Here — Beginner's Guide</a>
+    </div>
+</section>
+
+<section class="articles-section">
+    <div class="container">
+        <h2 class="section-title">Explore the Guide</h2>
+        <div class="articles-grid">
+            <div class="article-card">
+                <h3><a href="articles/getting-started-guide.html">Getting Started with Elden Ring Nightreign: A Beginner's Guide</a></h3>
+                <p>Everything you need to know before your first run — controls, objectives, class roles, and what to prioritize in the opening hours.</p>
+                <a href="articles/getting-started-guide.html" class="read-more">Read Guide &rarr;</a>
+            </div>
+            <div class="article-card">
+                <h3><a href="articles/best-classes-tier-list.html">Classes Explained: Best Build Tier List</a></h3>
+                <p>Full breakdown of every class, with damage profiles, armor ratings, and an updated S/A/B/C tier ranking for solo and co-op.</p>
+                <a href="articles/best-classes-tier-list.html" class="read-more">View Tier List &rarr;</a>
+            </div>
+            <div class="article-card">
+                <h3><a href="articles/boss-guide-common-pitfalls.html">Boss Guide: How to Beat Every Main Boss</a></h3>
+                <p>Mechanic-by-mechanic breakdown of every major boss fight, including the most common mistakes and how to avoid them.</p>
+                <a href="articles/boss-guide-common-pitfalls.html" class="read-more">Beat the Bosses &rarr;</a>
+            </div>
+            <div class="article-card">
+                <h3><a href="articles/nightreign-coop-multiplayer-guide.html">How to Play Nightreign Co-op: Multiplayer Guide</a></h3>
+                <p>Matchmaking, summoning friends, role composition, and the specific tactics that make co-op runs consistent instead of chaotic.</p>
+                <a href="articles/nightreign-coop-multiplayer-guide.html" class="read-more">Play Co-op &rarr;</a>
+            </div>
+            <div class="article-card">
+                <h3><a href="articles/rune-levelling-fast-guide.html">How to Level Up Fast: Runes & Progression Guide</a></h3>
+                <p>Where to find runes efficiently, which early-game farms outperform the rest, and how to manage levels across a multi-run roguelike loop.</p>
+                <a href="articles/rune-levelling-fast-guide.html" class="read-more">Farm Faster &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">&#9876;</div>
+                <h4>Class Builds</h4>
+                <p>S-tier picks for every playstyle, updated with the latest patch data.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">&#9760;</div>
+                <h4>Boss Tactics</h4>
+                <p>Frame-perfect reads and safe windows for every major encounter.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">&#9733;</div>
+                <h4>Co-op Strategy</h4>
+                <p>Team composition theory and the aggro mechanics you need to know.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">&#9879;</div>
+                <h4>Rune Farming</h4>
+                <p>Fastest routes and most reliable rune spots across all difficulty tiers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">
+            &#127942; Join the Discord
+        </a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.<br>All game content belongs to their respective owners.</p>
+    </div>
+</footer>
+
+</body>
+</html>

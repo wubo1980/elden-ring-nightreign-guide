@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Nightreign Classes Explained: Best Build Tier List</title>
+    <meta name="description" content="Full breakdown of every Elden Ring Nightreign class. Updated tier list ranking all builds for solo and co-op play, with strengths, weaknesses, and ideal scenarios.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root { --bg: #0a0a12; --bg2: #12121f; --accent: #c9a84c; --accent2: #4a9eff; --text: #e8e4d9; --text-dim: #9990a0; --border: #2a2a3f; --tier-s: #c9a84c; --tier-a: #4a9eff; --tier-b: #6a6a8a; --tier-c: #8a4a4a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+        .article-header { padding: 60px 24px 40px; text-align: center; }
+        .article-header h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--accent); line-height: 1.2; margin-bottom: 16px; }
+        .article-header .meta { color: var(--text-dim); font-size: 14px; }
+        .article-content { padding: 0 24px 60px; }
+        .article-content h2 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--accent); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .article-content h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 12px; }
+        .article-content p { margin-bottom: 18px; }
+        .article-content ul, .article-content ol { margin: 0 0 18px 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .article-content strong { color: var(--accent2); font-weight: 600; }
+        .inline-link { font-weight: 600; }
+
+        /* Tier table */
+        .tier-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 16px; }
+        .tier-table th { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; padding: 12px 16px; text-align: left; border-bottom: 2px solid var(--border); }
+        .tier-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .tier-table tr:last-child td { border-bottom: none; }
+        .tier-label { font-family: 'Cinzel', serif; font-weight: 700; font-size: 15px; padding: 4px 10px; border-radius: 2px; display: inline-block; }
+        .tier-s { background: rgba(201,168,76,0.15); color: var(--tier-s); border: 1px solid var(--tier-s); }
+        .tier-a { background: rgba(74,158,255,0.12); color: var(--tier-a); border: 1px solid var(--tier-a); }
+        .tier-b { background: rgba(106,106,138,0.12); color: var(--tier-b); border: 1px solid var(--tier-b); }
+        .tier-c { background: rgba(138,74,74,0.12); color: var(--tier-c); border: 1px solid var(--tier-c); }
+        .class-name { font-weight: 600; color: var(--text); }
+        .class-role { color: var(--text-dim); font-size: 14px; }
+        .key-tip { background: var(--bg2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+        .key-tip strong { color: var(--accent); }
+
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .footer-discord { display: inline-flex; align-items: center; gap: 8px; background: #5865F2; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 24px; border-radius: 4px; margin-bottom: 24px; }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+        @media (max-width: 600px) { .nav-links { display: none; } .tier-table { font-size: 14px; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="getting-started-guide.html">Beginner</a></li>
+            <li><a href="boss-guide-common-pitfalls.html">Bosses</a></li>
+            <li><a href="nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <h1>Elden Ring Nightreign Classes Explained: Best Build Tier List</h1>
+        <div class="meta">Class Guide &nbsp;&middot;&nbsp; Updated May 2026</div>
+    </div>
+</header>
+
+<article class="article-content">
+<div class="container">
+
+<h2>The Nightreign Class System</h2>
+<p>Unlike the main Elden Ring, Nightreign locks you into a single class for the duration of each run. Choose wisely — your class determines not just your damage type and HP pool, but your entire tactical playbook. A poorly matched class against a given boss can turn a manageable fight into a grind.</p>
+
+<p>This guide ranks all playable classes in Nightreign across two contexts: <strong>Solo/Offline</strong> play and <strong>Co-op/Multiplayer</strong> sessions. Rankings reflect current patch data as of the May 2026 launch window.</p>
+
+<h2>Class Tier List</h2>
+
+<table class="tier-table">
+<thead>
+<tr>
+    <th>Tier</th>
+    <th>Class</th>
+    <th>Role</th>
+    <th>Solo Rating</th>
+    <th>Co-op Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><span class="tier-label tier-s">S</span></td>
+    <td class="class-name">Wraith</td>
+    <td class="class-role">High mobility, intelligence caster, AoE spells</td>
+    <td>★★★★★</td>
+    <td>★★★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-s">S</span></td>
+    <td class="class-name">Duelist</td>
+    <td class="class-role">Fast dual-wielding, crit-focused, glass cannon</td>
+    <td>★★★★★</td>
+    <td>★★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-a">A</span></td>
+    <td class="class-name">Paladin</td>
+    <td class="class-role">Faith/STR hybrid, shields, healing miracles</td>
+    <td>★★★★</td>
+    <td>★★★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-a">A</span></td>
+    <td class="class-name">Berserker</td>
+    <td class="class-role">Max STR, hyper-armor on heavies, self-damage boost</td>
+    <td>★★★★</td>
+    <td>★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-a">A</span></td>
+    <td class="class-name">Conjurer</td>
+    <td class="class-role">Summons creatures to tank and deal damage</td>
+    <td>★★★★</td>
+    <td>★★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-b">B</span></td>
+    <td class="class-name">Rogue</td>
+    <td class="class-role">Stealth, backstab multiplier, balanced stats</td>
+    <td>★★★</td>
+    <td>★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-b">B</span></td>
+    <td class="class-name">Cleric</td>
+    <td class="class-role">Pure support, group heals, crowd control</td>
+    <td>★★</td>
+    <td>★★★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-b">B</span></td>
+    <td class="class-name">Spellblade</td>
+    <td class="class-role">INT/DEX hybrid, enchanted melee + spells</td>
+    <td>★★★</td>
+    <td>★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-c">C</span></td>
+    <td class="class-name">Grave Keeper</td>
+    <td class="class-role">Necromancy focus, minion army, slow cast time</td>
+    <td>★★</td>
+    <td>★★★</td>
+</tr>
+<tr>
+    <td><span class="tier-label tier-c">C</span></td>
+    <td class="class-name">Blood Mage</td>
+    <td class="class-role">HP-scaling spells, high risk/reward, low survivability</td>
+    <td>★★</td>
+    <td>★★</td>
+</tr>
+</tbody>
+</table>
+
+<h2>S-Tier Classes: The Cream of Nightreign</h2>
+
+<h3>Wraith — S-Tier, Solo &amp; Co-op</h3>
+<p>The Wraith is the premier intelligence-caster in Nightreign, packing a dense spell toolkit backed by strong mobility. Its signature ability, <strong>Shadowstep</strong>, grants brief invincibility frames during a quick dash — effectively a dodge with offensive upside. Wraith spells cover everything from single-target bursts (<em>Nightfall Bolt</em>) to devastating area denial (<em>Void Cascade</em>), making it equally effective against groups and bosses.</p>
+
+<p>In co-op, the Wraith fills the primary damage dealer role without sacrificing safety. Its mobility lets it stay on target while keeping clear of ally-blocking. The only weakness is a relatively low stamina pool, which means light attacks should be your default — heavy attacks in caster gear often leave you stuck mid-animation.</p>
+
+<div class="key-tip">
+<strong>Best for:</strong> Players who want to end fights fast. The Wraith has the highest consistent DPS ceiling in the game if you master its spell sequencing and positioning.</div>
+
+<h3>Duelist — S-Tier Solo, A-Tier Co-op</h3>
+<p>The Duelist runs a dual-dagger setup with a native critical hit multiplier — the highest raw crit potential in Nightreign. Its <strong>Flurry Strike</strong> skill chains a rapid multi-hit combo that, when landing on a stunned or posture-broken enemy, can delete health bars in seconds. The trade-off is a fragile HP pool — comparable to the Wraith — and no ranged capability whatsoever.</p>
+
+<p>In solo play, the Duelist is exceptional because it rewards aggression. Staying on offense keeps enemies in sustained stagger, which prevents them from executing their own attack patterns. In co-op, the Duelist's lack of AoE and need to be in melee range makes it secondary to classes that can contribute from safer positions.</p>
+
+<h2>A-Tier Classes: Strong and Situationally Exceptional</h2>
+
+<h3>Paladin — A-Tier Solo, S-Tier Co-op</h3>
+<p>The Paladin is the backbone of any serious co-op squad. It combines a usable shield (stamina absorption on block is above average), faith-scaled healing miracles, and solid STR-based weapon options. <strong>Divine Intervention</strong>, its class skill, creates a brief AoE heal burst around the Paladin — effective both for self-recovery and keeping allies alive in boss fights.</p>
+
+<p>Solo play is viable but slower. The Paladin lacks the raw damage output of the Wraith or Duelist, and its spellcasting is defensive rather than offensive. You will win fights, but you will win them methodically rather than explosively.</p>
+
+<h3>Berserker — A-Tier Solo, B-Tier Co-op</h3>
+<p>The Berserker is what it says on the tin: maximum strength, hyper-armor on heavy attacks, and a class skill (<strong>Blood Fury</strong>) that converts a portion of incoming damage into boosted attack power. Against sustained boss fights where you can maintain aggression, the Berserker outputs remarkable damage. Against rapid multi-enemy scenarios, its lack of mobility tools hurts it significantly.</p>
+
+<p>In co-op, the Berserker competes with the Paladin for the tank slot but lacks the support tools. It works best as an off-tank in groups that already have a primary healer.</p>
+
+<h3>Conjurer — A-Tier Both</h3>
+<p>The Conjurer summons spectral constructs — a knight and an archer — that draw enemy aggro and deal passive damage while the Conjurer casts from behind. In long encounters, these summons effectively act as additional party members. The summoning animation has a short cast time but a noticeable cooldown — don't waste it on trash mob packs, save it for boss fights and dense elite clusters.</p>
+
+<div class="key-tip">
+<strong>Key timing:</strong> Summons have aggro priority for approximately 8–10 seconds after being cast. After that window, enemies begin retargeting toward the Conjurer. Re-cast before this window expires for continuous uptime.</div>
+
+<h2>B-Tier Classes: Viable with the Right Approach</h2>
+
+<h3>Rogue — B-Tier Both</h3>
+<p>The Rogue is the most traditionally "Souls" class in Nightreign — balanced stats, fast weapons, access to stealth crouch. Its backstab multiplier is substantial, rewarding players who can position behind locked enemies. The problem is that Nightreign's enemy density often makes sustained stealth difficult, and the backstab bonus does not compensate for lower individual hit damage compared to the Duelist.</p>
+
+<p>Viable, but requires more mechanical skill to perform at the level of A-tier classes.</p>
+
+<h3>Cleric — B-Tier Solo, S-Tier Co-op</h3>
+<p>The Cleric is the dedicated support class. Its healing output in co-op is the highest in the game, and its crowd-control miracles (<em>Heaven's Palm</em>, which briefly stuns undead and dark-affinity enemies) can neutralize otherwise dangerous encounters. Solo, the Cleric struggles — damage output is too low to justify the slot, and you will spend longer in dangerous windows than the kit justifies.</p>
+
+<p>In co-op, a team without a dedicated healer is a team that will wipe on later boss iterations. If you are queuing with friends, the Cleric is always welcome.</p>
+
+<h3>Spellblade — B-Tier Both</h3>
+<p>The Spellblade splits the difference between Wraith and Duelist: INT/DEX hybrid scaling, the ability to enchant melee weapons with spell damage, and a moderate HP pool. Its versatility is both its strength and its weakness — it does everything adequately but nothing exceptionally. Strong for players who dislike committing to pure caster or pure melee archetypes.</p>
+
+<h2>C-Tier Classes: Niche Picks</h2>
+
+<h3>Grave Keeper — C-Tier Solo, B-Tier Co-op</h3>
+<p>Necromancy focus with large minion summons and a strong debuff toolset. Cast times are slow, which is the class's primary issue — in fast-paced combat, enemies frequently interrupt cast animations. In co-op, the Grave Keeper can function as a secondary debuffer, but the same support value is delivered more efficiently by the Cleric.</p>
+
+<h3>Blood Mage — C-Tier Both</h3>
+<p>HP-scaling spellcasting that converts a portion of the caster's health into spell power. The highest theoretical burst damage in the game, but survivability is critically low. Against any boss that can output damage faster than the Blood Mage can kill it, the class falls apart. A high-skill ceiling class that does not reward average execution.</p>
+
+<h2>Class Selection: Final Recommendations</h2>
+<p>For your first 10 runs, pick one of the S-tier classes and commit to learning it. The Wraith and Duelist both offer clear feedback loops — good play feels powerful, bad play feels instructive. The Paladin is the better choice if you primarily play with friends, where its support tools directly multiply team survivability.</p>
+
+<p>Once you have a baseline competency across two or three classes, experiment freely. Nightreign's class system has enough depth that a C-tier class in the hands of a dedicated expert can outperform an S-tier class played poorly. Tier lists measure potential; execution measures results.</p>
+
+<p>For boss strategies tailored to your chosen class, see the <a class="inline-link" href="boss-guide-common-pitfalls.html">Boss Guide</a>. For rune economy and fast levelling, see the <a class="inline-link" href="rune-levelling-fast-guide.html">Rune Guide</a>.</p>
+
+</div>
+</article>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">&#127942; Join the Discord</a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.</p>
+    </div>
+</footer>
+
+</body>
+</html>
