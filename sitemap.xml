@@ -40,4 +40,9 @@
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/deep-of-night-patch-1-0-3-2.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
