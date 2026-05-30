@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep of Night Patch 1.03.2 Notes — Raider & Executor Buffs, New Nightlord Boss</title>
+    <meta name="description" content="Complete breakdown of Elden Ring Nightreign Patch 1.03.2 (Deep of Night). Massive Raider and Executor buffs, a new Nightlord boss, Raids overhaul, and full balance changes.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root { --bg: #0a0a12; --bg2: #12121f; --accent: #c9a84c; --accent2: #4a9eff; --text: #e8e4d9; --text-dim: #9990a0; --border: #2a2a3f; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+        .article-header { padding: 60px 24px 40px; text-align: center; }
+        .article-header h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--accent); line-height: 1.2; margin-bottom: 16px; }
+        .article-header .meta { color: var(--text-dim); font-size: 14px; }
+        .article-content { padding: 0 24px 60px; }
+        .article-content h2 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--accent); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .article-content h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 12px; }
+        .article-content p { margin-bottom: 18px; }
+        .article-content ul, .article-content ol { margin: 0 0 18px 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .article-content strong { color: var(--accent2); font-weight: 600; }
+        .article-content em { color: var(--text-dim); }
+        .key-tip { background: var(--bg2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+        .key-tip strong { color: var(--accent); }
+        .inline-link { font-weight: 600; }
+        .patch-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); border: 1px solid var(--accent); font-family: 'Cinzel', serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; padding: 4px 12px; border-radius: 2px; margin-bottom: 8px; }
+        .buff-bar { background: rgba(74,255,100,0.1); border-left: 3px solid #4aff64; padding: 12px 16px; margin: 16px 0; border-radius: 0 4px 4px 0; }
+        .buff-bar strong { color: #4aff64; }
+        .nerf-bar { background: rgba(255,74,74,0.1); border-left: 3px solid #ff4a4a; padding: 12px 16px; margin: 16px 0; border-radius: 0 4px 4px 0; }
+        .nerf-bar strong { color: #ff4a4a; }
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .footer-discord { display: inline-flex; align-items: center; gap: 8px; background: #5865F2; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 24px; border-radius: 4px; margin-bottom: 24px; }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+        @media (max-width: 600px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="best-classes-tier-list.html">Classes</a></li>
+            <li><a href="boss-guide-common-pitfalls.html">Bosses</a></li>
+            <li><a href="nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <span class="patch-badge">Patch 1.03.2</span>
+        <h1>Deep of Night Update: Raider &amp; Executor Buffs, New Nightlord Boss, Raids Overhaul</h1>
+        <div class="meta">Patch Notes &nbsp;&middot;&nbsp; Updated May 2026</div>
+    </div>
+</header>
+
+<article class="article-content">
+<div class="container">
+
+<h2>Deep of Night 更新概览</h2>
+<p>Patch 1.03.2 — codenamed <strong>Deep of Night</strong> — has arrived for Elden Ring Nightreign, bringing the most significant gameplay shakeup since launch. This patch targets two underperforming Nightfarer classes (Raider and Executor) with substantial reworks, introduces a new Nightlord boss challenge, overhauls the Raids experience, and delivers a sweeping balance pass across weapons, enemies, and progression systems.</p>
+
+<p>Below is the complete breakdown of everything that changed, why it matters, and how these adjustments reshape the current meta.</p>
+
+<h2>Raider &amp; Executor — Massive Buffs</h2>
+
+<p>The headline of Patch 1.03.2: two of Nightreign's least-played classes have been given dramatic overhauls that fundamentally change their performance profiles. If you wrote off the Raider or Executor in previous patch cycles, now is the time to revisit them.</p>
+
+<h3>Raider — From B-Tier to S-Tier Contender</h3>
+
+<p>Before 1.03.2, the Raider was a jack-of-all-trades class that paid the versatility tax too heavily — its damage output was mediocre, its survivability tools were clunky, and its niche in co-op was unclear. The Deep of Night patch changes all of that with a multi-target rework:</p>
+
+<div class="buff-bar">
+<strong>&#9650; Base Attack Damage Increased +18%</strong> — Both light and heavy attacks have been lifted substantially across all Raider weapon types. The class no longer feels like it hits with a wet noodle.</div>
+
+<div class="buff-bar">
+<strong>&#9650; New Passive: Vanguard Momentum</strong> — Landing consecutive hits now builds a momentum stack that increases attack speed by 3% per stack (max 5 stacks, 15% total). Stacks decay at 1 per second after 2 seconds of no hits. This transforms the Raider into a ramp-up brawler — the longer you stay on the offensive, the faster you swing.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Class Skill Rework: Breakthrough Charge</strong> — Replaces the old charge attack with a forward-breaking rush that grants poise armor during the animation and deals 200% increased stance damage on impact. Cooldown reduced from 18s to 12s. This makes the Raider the premier posture-breaking class in the game.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Stamina Recovery Buffed +25%</strong> — Faster stamina recovery means the Raider can sustain longer offensive windows before needing to disengage. In practice, this translates to roughly 2-3 extra attacks per engagement cycle.</div>
+
+<p><strong>Verdict:</strong> The Raider is now among the strongest melee classes in the game. Its ramp-up mechanics reward sustained aggression — something Nightreign's combat system supports well with the right positioning. In co-op, the new Breakthrough Charge gives the Raider an explicit role as the frontline initiator, and its buffed damage output means it can hold that frontline without relying entirely on supports. See our updated <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a> for the full ranking impact.</p>
+
+<h3>Executor — S-Tier Co-op, A-Tier Solo</h3>
+
+<p>The Executor's identity has always been about executing weakened enemies — high finishing damage on low-HP targets. The problem was that it was too reliant on allies to soften targets up, leaving it awkward in solo play and inconsistently useful in co-op. Patch 1.03.2 repositions the Executor as a versatile ranged/support hybrid.</p>
+
+<div class="buff-bar">
+<strong>&#9650; Execute Threshold Increased 30% → 45%</strong> — The famed Execute passive now triggers when enemies fall below 45% HP instead of the previous 30%. This dramatically expands the window where the Executor's damage spikes, making it practical against bosses and elite enemies, not just trash mobs.</div>
+
+<div class="buff-bar">
+<strong>&#9650; New Skill: Mark of the Hunt</strong> — Tags a single target for 15 seconds. All damage dealt to the marked target by the Executor and their allies is increased by 15%. Cooldown: 20s. This gives the Executor a strong team-wide damage buff that rewards coordinated focus fire.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Ranged Attack Speed +10%</strong> — All ranged attacks (throwing knives, bow-based class attacks) now have 10% faster animation speed, allowing the Executor to weave in more damage between repositioning.</div>
+
+<div class="buff-bar">
+<strong>&#9650; HP Pool Increased +12%</strong> — A much-needed survivability bump. The Executor was previously too fragile for the mid-range positioning it needs to be effective. This change brings its durability in line with the Conjurer and Spellblade.</div>
+
+<p><strong>Verdict:</strong> The Executor finally has a clear identity: a debuff-focused ranged finisher that shines brightest in coordinated groups. Its new Mark of the Hunt skill rewards teams that communicate their target priority. Solo, the broader execute threshold makes it viable without feeling helpless in the early game.</p>
+
+<h2>New Nightlord Boss — The Dusk Warden</h2>
+
+<p>Patch 1.03.2 introduces a brand-new optional Nightlord encounter: <strong>The Dusk Warden</strong>, a colossal spectral sentinel that patrols the new "Ashen Hollow" sub-region. Unlike existing Nightlords, the Dusk Warden is not tied to a specific cycle phase — it can be encountered during any Night phase, making it a dynamic threat that demands preparation.</p>
+
+<h3>Dusk Warden — Mechanics</h3>
+<ul>
+<li><strong>Phase 1 (75% HP+):</strong> Slow sweeping attacks with large AoE indicators. The Warden swings its massive greatshield in wide arcs. Safe windows open after each shield slam (roughly 2.5s of recovery). Learn the rhythm — the shield slam is punishable on every iteration.</li>
+<li><strong>Phase 2 (40-75% HP):</strong> Summons spectral minions — four <em>Wraith Shades</em> that chase the nearest player. The Warden continues its shield attacks during this phase but at a reduced frequency. Priority one: clear the shades quickly (they have roughly 30% of a standard elite's HP) before refocusing on the Warden.</li>
+<li><strong>Phase 3 (Below 40% HP):</strong> Enrages. Attack speed increases by 40%. Gains a new gap-closing lunge attack (<em>Dusk Rush</em>) that tracks the target. This is the wipe window — the Warden's increased speed means positioning mistakes are punished instantly. Cooldown management becomes critical here.</li>
+</ul>
+
+<h3>Dusk Warden — Rewards</h3>
+<p>Defeating the Dusk Warden guarantees a <strong>Nightlord's Ember</strong> — a consumable item that, when used at a Site of Grace, upgrades all equipped weapons by one tier for the remainder of the run. It's an incredibly powerful reward that justifies the difficulty spike.</p>
+
+<div class="key-tip">
+<strong>Tip:</strong> The Dusk Warden's spectral minions have a weakness to Holy damage. If your class or weapon setup can access any holy-type damage source (Unholy Blade, Sacred Infusion), the shades melt in 2-3 hits instead of 5-6. The Paladin and Cleric classes have inherent advantages here.</div>
+
+<h2>Raids Overhaul</h2>
+
+<p>One of the most requested changes in the community was Raids quality-of-life. Patch 1.03.2 delivers a significant overhaul to the Raids experience that addresses the biggest pain points.</p>
+
+<h3>What Changed</h3>
+
+<div class="buff-bar">
+<strong>&#9650; Respawn Checkpoints Added</strong> — Multi-stage Raids now have checkpoints after each major encounter. If your party wipes on the third stage, you restart at the most recent checkpoint instead of the beginning. This was the single biggest complaint about Raids — and it's now fixed.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Raid-Locked Rewards Reworked</strong> — Raid completion now grants a badge currency (Dusk Tokens) that can be spent on a vendor in Roundtable Hold. The vendor pool includes exclusive weapon skins, emotes, and a new class-agnostic armor set. No more RNG-dependent raid drops.</div>
+
+<div class="nerf-bar">
+<strong>&#9660; Raid Enemy HP Reduced 20%</strong> — Earlier Raid stages had HP sponges that made the experience feel like a grind. This change brings Raid enemy durability in line with campaign difficulty, making the pacing feel intentional rather than tedious.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Matchmaking Improvements</strong> — Role-based matchmaking has been introduced. Queuing as a support or tank class now matches you faster, and the system attempts to avoid stacking duplicate roles.</div>
+
+<div class="buff-bar">
+<strong>&#9650; New Raid Variant: Nightmare Gauntlet</strong> — A higher-difficulty raid variant with modified enemy placements, a shorter time limit, and an exclusive title reward. This is optional content aimed at groups seeking a harder challenge.</div>
+
+<h2>Balance Adjustment Summary</h2>
+
+<p>Beyond the major class reworks and new content, Patch 1.03.2 includes a broad set of tuning changes across weapons, enemies, and core systems.</p>
+
+<h3>Weapon Adjustments</h3>
+
+<div class="buff-bar">
+<strong>&#9650; Greatswords +8% damage</strong> — Slow weapons felt underrewarded compared to fast-attack setups. This buff makes greatsword swing commitment feel more proportional to the damage output.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Spears +5% attack speed</strong> — Spears' primary niche is reach and poke. The extra speed improves their viability without changing their fundamental poke-playstyle identity.</div>
+
+<div class="nerf-bar">
+<strong>&#9660; Daggers -10% base damage</strong> — Daggers were overperforming relative to their attack speed advantage, particularly on classes with stacking damage modifiers (Duelist, Rogue). This brings them in line with other fast-attack options.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Staves +12% spell damage scaling</strong> — Caster-focused classes benefit from better per-point scaling on intelligence builds. Particularly impactful for Wraith and Mage archetypes.</div>
+
+<h3>Enemy Adjustments</h3>
+
+<div class="nerf-bar">
+<strong>&#9660; Elite Ghost Knights: damage reduced 15%</strong> — These enemies were disproportionately punishing for new players and groups without reliable healing. The reduction brings their threat level in line with other elites of the same tier.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Night bosses: rune rewards +20%</strong> — Night bosses are now more rewarding to incentivize taking the risk of engaging at night rather than skipping the cycle phase.</div>
+
+<div class="nerf-bar">
+<strong>&#9660; Mimic Tears (enemy): HP -12%</strong> — The mimic variant was frustrating in co-op due to its inflated HP scaling with party size. The reduction makes it a shorter but still tactical encounter.</div>
+
+<h3>Progression Changes</h3>
+
+<div class="buff-bar">
+<strong>&#9650; Rune gain from co-op kills +15%</strong> — Co-op runs were generating fewer runes per hour than solo runs, creating an incentive to play solo for efficiency. This closes the gap and makes group play more rewarding.</div>
+
+<div class="buff-bar">
+<strong>&#9650; Early game (Runes 1-30): level cost reduced 10%</strong> — The first 30 levels are now slightly cheaper, reducing the friction for new players and making the early-run snowball more achievable.</div>
+
+<div class="nerf-bar">
+<strong>&#9660; Late game (Runes 100+): level cost increased 15%</strong> — To keep the endgame progression curve meaningful, levels beyond 100 are now more expensive. This affects only high-run characters and is not noticeable on standard runs.</div>
+
+<h2>How the Patch Changes the Meta</h2>
+
+<p>With the Raider and Executor elevated to competitive viability and the balance pass tightening several outlier weapons, the Patch 1.03.2 meta looks significantly more diverse than the launch meta. Here's what you need to know:</p>
+
+<ul>
+<li><strong>The Raider</strong> is now a legitimate S-tier option for posture-break focused play. In co-op, pairing a Raider with a Paladin creates a frontline that can sustain and push simultaneously. The Breakthrough Charge skill makes the Raider the best option for initiating boss arenas.</li>
+<li><strong>The Executor</strong> excels in coordinated co-op groups where target focus is communicated. The Mark of the Hunt debuff stacks with other damage bonuses, making it particularly powerful in three-player squads with a dedicated damage dealer.</li>
+<li><strong>Dagger builds</strong> have taken a hit. The 10% damage reduction is significant for classes that relied on dagger DPS rotations. Consider switching to straight swords or curved swords for comparable speed with better per-hit output.</li>
+<li><strong>Night encounters</strong> are now more rewarding than ever. The 20% rune boost means that Night-time engagement isn't just high-risk — it's materially better for progression. Adjust your run strategy to prioritize night phases rather than avoiding them.</li>
+</ul>
+
+<div class="key-tip">
+<strong>Bottom line:</strong> If you haven't played Nightreign since launch, come back. The Deep of Night patch fixes the most glaring issues (Raid checkpoints, class balance) and adds enough new content — including the Dusk Warden and Nightmare Gauntlet — to justify a fresh run. This is the strongest state the game has been in.</div>
+
+<p>For class-specific build advice with the new patch data, check the updated <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a>. For boss guides covering the Dusk Warden and other Nightlord encounters, see the <a class="inline-link" href="boss-guide-common-pitfalls.html">Boss Guide</a>.</p>
+
+</div>
+</article>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">&#127942; Join the Discord</a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.</p>
+    </div>
+</footer>
+
+</body>
+</html>
