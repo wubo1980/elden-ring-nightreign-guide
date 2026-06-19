@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Boss Weaknesses & Strategy Guide — Elden Ring Nightreign</title>
+    <meta name="description" content="Complete elemental weakness table and strategy guide for every Elden Ring Nightreign boss. Exploit vulnerabilities, status effects, and phase-specific tactics for each Nightlord and major encounter.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root { --bg: #0a0a12; --bg2: #12121f; --accent: #c9a84c; --accent2: #4a9eff; --text: #e8e4d9; --text-dim: #9990a0; --border: #2a2a3f; --weak: #4aff64; --resist: #ff4a4a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+        .article-header { padding: 60px 24px 40px; text-align: center; }
+        .article-header h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--accent); line-height: 1.2; margin-bottom: 16px; }
+        .article-header .meta { color: var(--text-dim); font-size: 14px; }
+        .article-content { padding: 0 24px 60px; }
+        .article-content h2 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--accent); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .article-content h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 12px; }
+        .article-content p { margin-bottom: 18px; }
+        .article-content ul, .article-content ol { margin: 0 0 18px 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .article-content strong { color: var(--accent2); font-weight: 600; }
+        .inline-link { font-weight: 600; }
+
+        .weakness-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+        .weakness-table th { background: var(--bg2); color: var(--accent); font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 1px; padding: 12px; text-align: left; border-bottom: 2px solid var(--border); }
+        .weakness-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+        .weakness-table tr:hover { background: rgba(201,168,76,0.04); }
+        .weakness-table .weak { color: var(--weak); }
+        .weakness-table .resist { color: var(--resist); }
+        .weakness-table .neutral { color: var(--text-dim); }
+        .tag-fire { display: inline-block; background: rgba(255,100,50,0.15); color: #ff6432; padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+        .tag-holy { display: inline-block; background: rgba(255,215,0,0.15); color: #ffd700; padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+        .tag-light { display: inline-block; background: rgba(74,158,255,0.15); color: #4a9eff; padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+        .tag-dark { display: inline-block; background: rgba(120,80,200,0.15); color: #7850c8; padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+        .tag-poison { display: inline-block; background: rgba(74,255,100,0.15); color: var(--weak); padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+        .tag-bleed { display: inline-block; background: rgba(255,74,74,0.15); color: #ff4a4a; padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+        .tag-stance { display: inline-block; background: rgba(201,168,76,0.15); color: var(--accent); padding: 2px 8px; border-radius: 2px; font-size: 12px; font-weight: 600; margin: 1px; }
+
+        .boss-entry { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 24px; margin: 28px 0; }
+        .boss-entry h3 { color: var(--accent); font-family: 'Cinzel', serif; font-size: 17px; margin-bottom: 12px; }
+        .boss-entry .boss-loc { color: var(--text-dim); font-size: 14px; margin-bottom: 12px; font-style: italic; }
+        .strat-box { border-left: 3px solid var(--accent); padding: 12px 16px; margin: 12px 0; border-radius: 0 2px 2px 0; }
+        .strat-box strong { color: var(--accent); }
+        .key-tip { background: var(--bg2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+        .key-tip strong { color: var(--accent); }
+
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .footer-discord { display: inline-flex; align-items: center; gap: 8px; background: #5865F2; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 24px; border-radius: 4px; margin-bottom: 24px; }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+        @media (max-width: 600px) { .nav-links { display: none; } }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5S7PJE4YG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-5S7PJE4YG4");
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="best-classes-tier-list.html">Classes</a></li>
+            <li><a href="boss-guide-common-pitfalls.html">Bosses</a></li>
+            <li><a href="nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <h1>All Boss Weaknesses &amp; Strategy Guide</h1>
+        <div class="meta">Elemental Weaknesses &middot; Status Effect Vulnerabilities &middot; Phase-Specific Tactics &middot; Updated June 2026</div>
+    </div>
+</header>
+
+<article class="article-content">
+<div class="container">
+<img src="../images/elden-ring-boss-fight.png" alt="Elden Ring Nightreign boss weakness strategy guide" style="width:100%;margin-bottom:24px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+
+<p>Every boss in Elden Ring Nightreign has a unique set of elemental resistances and status vulnerabilities. Picking the right damage type can cut a boss fight's duration by 30-50% — and in a roguelike where every minute of Night phase counts, that advantage translates directly into survival.</p>
+
+<p>This guide serves as your complete weakness reference. It covers every major boss encounter in Nightreign, including Patch 1.03.2's new Nightlord, the Dusk Warden. Bookmark this page — you will come back to it every time you face a new boss for the first time.</p>
+
+<div class="key-tip">
+<strong>Quick Rule of Thumb:</strong> If you are unsure what a boss is weak to, try <span class="tag-holy">Holy</span> damage first. Most spectral and undead-type bosses in Nightreign have a Holy weakness. If Holy does not land, pivot to <span class="tag-fire">Fire</span> — it is the most broadly effective element across the boss roster. Save <span class="tag-dark">Dark</span> and <span class="tag-light">Lightning</span> for the specific bosses that explicitly demand them.
+</div>
+
+<h2>Complete Elemental Weakness Table</h2>
+
+<table class="weakness-table">
+<thead>
+<tr>
+    <th>Boss</th>
+    <th>Location</th>
+    <th>Fire</th>
+    <th>Holy</th>
+    <th>Lightning</th>
+    <th>Dark</th>
+    <th>Physical</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>Fell Omen</strong></td>
+    <td>Limberald Depths</td>
+    <td class="weak">Weak</td>
+    <td class="neutral">&mdash;</td>
+    <td class="weak">Weak</td>
+    <td class="resist">Resists</td>
+    <td class="neutral">&mdash;</td>
+</tr>
+<tr>
+    <td><strong>Night Warden</strong></td>
+    <td>Night Phase (Random)</td>
+    <td class="neutral">&mdash;</td>
+    <td class="weak">Weak</td>
+    <td class="resist">Resists</td>
+    <td class="neutral">&mdash;</td>
+    <td class="neutral">&mdash;</td>
+</tr>
+<tr>
+    <td><strong>Grave Sentinel</strong></td>
+    <td>Cemetery Gate</td>
+    <td class="weak">Weak</td>
+    <td class="weak">Weak</td>
+    <td class="neutral">&mdash;</td>
+    <td class="resist">Resists</td>
+    <td class="neutral">&mdash;</td>
+</tr>
+<tr>
+    <td><strong>Stormcaller</strong></td>
+    <td>High Peaks</td>
+    <td class="neutral">&mdash;</td>
+    <td class="neutral">&mdash;</td>
+    <td class="resist">Resists</td>
+    <td class="weak">Weak</td>
+    <td class="weak">+ Stance</td>
+</tr>
+<tr>
+    <td><strong>Abyssal Knight</strong></td>
+    <td>Depth Chambers</td>
+    <td class="resist">Resists</td>
+    <td class="weak">Weak</td>
+    <td class="neutral">&mdash;</td>
+    <td class="resist">Resists</td>
+    <td class="weak">+ Bleed</td>
+</tr>
+<tr>
+    <td><strong>Dusk Warden</strong></td>
+    <td>Ashen Hollow</td>
+    <td class="neutral">&mdash;</td>
+    <td class="weak">Weak</td>
+    <td class="neutral">&mdash;</td>
+    <td class="resist">Resists</td>
+    <td class="weak">+ Stance</td>
+</tr>
+<tr>
+    <td><strong>Crimson Wyrm</strong></td>
+    <td>Dragon Peak</td>
+    <td class="resist">Resists</td>
+    <td class="weak">Weak</td>
+    <td class="neutral">&mdash;</td>
+    <td class="neutral">&mdash;</td>
+    <td class="weak">+ Bleed</td>
+</tr>
+<tr>
+    <td><strong>Phantom Council</strong></td>
+    <td>Roundtable Ruins</td>
+    <td class="weak">Weak</td>
+    <td class="weak">Weak</td>
+    <td class="neutral">&mdash;</td>
+    <td class="resist">Resists</td>
+    <td class="neutral">&mdash;</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Status Effect Vulnerabilities</h2>
+
+<p>Status effects can be just as valuable as elemental damage type. Applying the right status can stagger a boss out of a dangerous attack chain or deal massive percentage-based damage over time.</p>
+
+<table class="weakness-table">
+<thead>
+<tr>
+    <th>Boss</th>
+    <th><span class="tag-bleed">Bleed</span></th>
+    <th><span class="tag-poison">Poison</span></th>
+    <th><span class="tag-stance">Stance Break</span></th>
+    <th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>Fell Omen</strong></td>
+    <td class="weak">Vulnerable</td>
+    <td class="weak">Vulnerable</td>
+    <td class="neutral">Normal</td>
+    <td>Bleed procs deal ~12% max HP; ideal for bleed builds</td>
+</tr>
+<tr>
+    <td><strong>Night Warden</strong></td>
+    <td class="neutral">Normal</td>
+    <td class="neutral">Normal</td>
+    <td class="weak">Vulnerable</td>
+    <td>Stance break cancels its AoE charge — high priority</td>
+</tr>
+<tr>
+    <td><strong>Grave Sentinel</strong></td>
+    <td class="weak">Vulnerable</td>
+    <td class="resist">Immune</td>
+    <td class="neutral">Normal</td>
+    <td>Undead type — immune to poison, weak to bleed</td>
+</tr>
+<tr>
+    <td><strong>Stormcaller</strong></td>
+    <td class="resist">Immune</td>
+    <td class="weak">Vulnerable</td>
+    <td class="weak">Vulnerable</td>
+    <td>Two stance breaks = guaranteed lightning resistance drop</td>
+</tr>
+<tr>
+    <td><strong>Abyssal Knight</strong></td>
+    <td class="weak">Vulnerable</td>
+    <td class="weak">Vulnerable</td>
+    <td class="neutral">Normal</td>
+    <td>Bleed + Poison stack for accelerated damage phases</td>
+</tr>
+<tr>
+    <td><strong>Dusk Warden</strong></td>
+    <td class="neutral">Normal</td>
+    <td class="resist">Immune</td>
+    <td class="weak">Vulnerable</td>
+    <td>Stance break prevents Wraith Shade summon in P2</td>
+</tr>
+<tr>
+    <td><strong>Crimson Wyrm</strong></td>
+    <td class="weak">Vulnerable</td>
+    <td class="neutral">Normal</td>
+    <td class="neutral">Normal</td>
+    <td>Bleed proc on head deals double damage</td>
+</tr>
+<tr>
+    <td><strong>Phantom Council</strong></td>
+    <td class="neutral">Normal</td>
+    <td class="resist">Immune</td>
+    <td class="weak">Vulnerable</td>
+    <td>Stance break interrupts the Council's teleport combo</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Boss-by-Boss Strategy Breakdown</h2>
+
+<h3>Fell Omen &mdash; Limberald Depths</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Medium &middot; Recommended Level: 15+ &middot; Night Phase: 1</p>
+<p>The Fell Omen is often the first mini-boss new players face after clearing the tutorial zone. It is a hulking, brutish enemy with slow but devastating attacks.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-fire">Fire</span> and <span class="tag-light">Lightning</span> damage. Physical damage is effective but resisted by 15% in its armored phase (below 50% HP). </p>
+<p><strong>Status Strategy:</strong> Apply bleed to accelerate through its first phase. Two bleed procs typically trigger its phase transition, skipping several attack cycles.</p>
+<p><strong>Phase 1 (100-50% HP):</strong> The Fell Omen uses heavy overhead slams and wide sweeps. Dodge toward its back leg — attacks have a recovery window there that is 0.5s longer than in front. Safe window after each slam is roughly 3 seconds.</p>
+<p><strong>Phase 2 (Below 50% HP):</strong> Armor activates, reducing physical damage by 25%. The Fell Omen gains a charge attack that covers 60% of the arena. Jump over the charge (not dodge roll) — the hitbox is ground-level and jumping avoids it completely. After a charge miss, the boss is stunned for 4 seconds. This is your biggest damage window.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Fire-infused straight sword or curved sword. The attack speed lets you land 2-3 hits per safe window. Spirit Ash with lightning damage (if available) adds ~30% DPS during the charge stun window.</div>
+</div>
+
+<h3>Grave Sentinel &mdash; Cemetery Gate</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Medium &middot; Recommended Level: 20+ &middot; Night Phase: 1-2</p>
+<p>The Grave Sentinel is an undead knight guarded by respawning skeletal adds. It patrols Cemetery Gate, a constricted arena with limited room to maneuver.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-fire">Fire</span> and <span class="tag-holy">Holy</span> damage. The Sentinel is an undead-type boss — holy damage stops its skeleton adds from respawning after killing them.</p>
+<p><strong>Status Strategy:</strong> Bleed is highly effective. Poison is completely immune (undead type). Use the Blood Grease consumable if your class can apply it.</p>
+<p><strong>Phase 1 (100-50% HP):</strong> The Sentinel uses broad shield bashes and spear thrusts. Focus on killing the skeleton adds first — they explode for dark damage after 15 seconds if not dealt with. Holy-infused weapons one-shot the adds.</p>
+<p><strong>Phase 2 (Below 50% HP):</strong> The Sentinel discards its shield and dual-wields its spear with increased attack speed. It gains a spinning attack that covers 360 degrees and combos into a thrust. The safe window is strafing right — the spin attack's recovery is slow if it does not hit you, giving you 2.5 seconds for punishes.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Paladin or Cleric class with holy infusion on a straight sword. The inherent holy damage on these classes makes the adds trivial and preserves your FP for healing. See the <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a> for recommended stat spreads.</div>
+</div>
+
+<h3>Stormcaller &mdash; High Peaks</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Hard &middot; Recommended Level: 30+ &middot; Night Phase: 2-3</p>
+<p>The Stormcaller is a lightning-wielding humanoid boss with extremely punishing AoE attacks. It has very high mobility and will frequently reposition across the arena.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-dark">Dark</span> damage and stance breaks. Lightning damage is completely resisted (the boss absorbs it and heals for 5% of the damage dealt). Physical stance breaks are your primary path to victory.</p>
+<p><strong>Status Strategy:</strong> Poison is effective — the Stormcaller has low poison resistance and takes 15% max HP over 30 seconds per application. Bleed is completely immune. Stance breaks are the real MVP: every two stance breaks temporarily disable the Stormcaller's lightning aura for 10 seconds.</p>
+<p><strong>Phase 1 (100-40% HP):</strong> The Stormcaller spams lightning bolts from range and uses a lightning-infused spear in melee. Stay close — its ranged attacks are harder to dodge than its melee swings. The spear combos are punishable after the third hit.</p>
+<p><strong>Phase 2 (Below 40% HP):</strong> Enrages. Casts <em>Storm's Wrath</em> — a full-arena lightning AoE with a 2-second windup. Watch for the ground glow telegraph and roll toward the boss at 1.5 seconds. If you are at range, the AoE is much harder to avoid. The safe spot is directly under the boss during the cast.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Raider class with Breakthrough Charge (Patch 1.03.2). The high stance damage from Breakthrough Charge lets you hit the two-stance-break threshold much faster. Pair with a dark-infused weapon. See the <a class="inline-link" href="deep-of-night-patch-1-0-3-2.html">Deep of Night patch notes</a> for Raider changes.</div>
+</div>
+
+<h3>Abyssal Knight &mdash; Depth Chambers</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Hard &middot; Recommended Level: 35+ &middot; Night Phase: 2-3</p>
+<p>A heavily armored knight that phase-shifts between physical and ethereal forms. The Abyssal Knight is a DPS check — if you cannot burn through its ethereal phase quickly, it regenerates 20% of its max HP.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-holy">Holy</span> damage. Fire and dark are both resisted. Bleed is your best status option — it deals damage that bypasses the ethereal form's damage reduction.</p>
+<p><strong>Status Strategy:</strong> Stack bleed and poison simultaneously. Bleed bypasses the ethereal phase damage reduction entirely. Poison ticks during its physical phase add up to roughly 8% max HP per application. Use the Executor class with its increased execute threshold (45% HP, Patch 1.03.2) to exploit the bleed window.</p>
+<p><strong>Phase 1 (100-60% HP, Physical):</strong> The Knight uses slow, heavy greatsword swings with long recovery. Parry windows are generous — 3 successful parries trigger a riposte that deals 15% max HP damage.</p>
+<p><strong>Phase 2 (60-40% HP, Ethereal):</strong> The Knight becomes translucent and takes 50% reduced damage from all sources except bleed. It dashes rapidly and projectiles phase through walls. Use AoE attacks — the Knight's hitbox is large despite its visual form. If the ethereal phase lasts longer than 20 seconds, the Knight returns to physical form with 20% HP restored.</p>
+<p><strong>Phase 3 (Below 40% HP):</strong> Alternates between physical and ethereal every 15 seconds. Time your burst windows for the physical transitions. Save your class skill and Ashes of War for these windows.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Executor class (Mark of the Hunt skill increases all damage on the marked target by 15%). Dual-wield bleed-infused weapons. The Executor's elevated execute threshold makes the final phase much more manageable. Check the <a class="inline-link" href="best-classes-tier-list.html">updated tier list</a> for build details.</div>
+</div>
+
+<h3>The Dusk Warden &mdash; Ashen Hollow (Patch 1.03.2)</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Very Hard &middot; Recommended Level: 40+ &middot; Night Phase: Any &middot; New in Patch 1.03.2</p>
+<p>The Dusk Warden is the new optional Nightlord introduced in the Deep of Night update. Unlike other Nightlords, it can appear during any Night phase, making it an unpredictable threat that demands preparation. It patrols the new Ashen Hollow sub-region.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-holy">Holy</span> damage. Dark damage is resisted. Stance breaks are effective — landing a break during the Warden's summon animation cancels the Wraith Shades entirely.</p>
+<p><strong>Status Strategy:</strong> Poison is immune. Bleed is normal effectiveness. Stance breaks are the priority — a well-timed break in Phase 2 prevents the add spawn, which is the fight's wipe mechanism.</p>
+<p><strong>Phase 1 (100-75% HP):</strong> The Warden uses slow greatshield sweeps with large AoE indicators. Each shield slam has roughly 2.5 seconds of recovery. Learn the rhythm — every slam is punishable. Do not panic roll; the windup is generous and the recovery is consistent.</p>
+<p><strong>Phase 2 (40-75% HP):</strong> Summons four <em>Wraith Shades</em> that chase the nearest player. The Warden continues attacks but at reduced frequency. <strong>Priority:</strong> Clear the shades immediately (they have ~30% of a standard elite's HP). Holy damage one-shots the shades. If you lack holy damage, use AoE skills to clear them in 2-3 hits each.</p>
+<p><strong>Phase 3 (Below 40% HP):</strong> Enrages. Attack speed increases by 40%. Gains <em>Dusk Rush</em> — a gap-closing lunge that tracks the target. This is the wipe window. Positioning is everything: stay close to the Warden to minimize the lunge's travel distance. Cooldown management becomes critical here — save your healing flask and class skill for this phase.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Paladin or Cleric for holy innate damage. Raider with Breakthrough Charge for the Phase 2 stance break cancel. If solo, bring a Holy-infused weapon and prioritize survivability talismans. Full coverage of the Dusk Warden's mechanics in the <a class="inline-link" href="deep-of-night-patch-1-0-3-2.html">Deep of Night Patch Notes</a>.</div>
+</div>
+
+<h3>Crimson Wyrm &mdash; Dragon Peak</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Very Hard &middot; Recommended Level: 45+ &middot; Night Phase: 3</p>
+<p>The Crimson Wyrm is a fire-breathing dragon boss with devastating breath attacks and a massive HP pool. It is a marathon fight — pacing your stamina and healing resources is more important than burst damage.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-holy">Holy</span> damage. Fire is completely nullified. Bleed procs on the Wyrm's head deal double damage.</p>
+<p><strong>Status Strategy:</strong> Bleed is the most efficient status here. Head shots with bleed proc for roughly 8% max HP per trigger. Poison is moderately effective but ticks are reduced by 50% due to the Wyrm's regeneration passive.</p>
+<p><strong>Phase 1 (100-50% HP):</strong> The Wyrm stays grounded and uses fire breath (frontal cone), tail sweep (back arc), and claw swipes. Stay at its flank — the safest position is just behind its front leg. When it rears back, expect fire breath and sprint sideways immediately.</p>
+<p><strong>Phase 2 (Below 50% HP):</strong> The Wyrm takes flight. It strafes the arena with fire breath, creating a lethal zone that covers ~60% of the ground. Use the terrain — rock formations provide cover from the strafing breath. When it lands (after 3 strafing passes), it is exhausted for 5 seconds. This is your primary damage window.</p>
+<p><strong>Phase 3 (Below 25% HP):</strong> Returns to grounded combat but adds a new attack: <em>Infernal Roar</em>, a full-arena fire nova with a 3-second windup. Use the <a class="inline-link" href="day-by-day-night-cycle-guide.html">night cycle strategy</a> to time your encounters — fighting the Wyrm early in the Night phase gives you more margin for error.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Ranged classes excel here — the Conjurer and Spellblade can consistently hit the Wyrm's head during its grounded phases. Holy-infused arrows or spells are ideal. Melee builds should prioritize bleed and learn the flank positioning. Dragon Crest Shield talisman is strongly recommended for fire damage reduction.</div>
+</div>
+
+<h3>Phantom Council &mdash; Roundtable Ruins</h3>
+<div class="boss-entry">
+<p class="boss-loc">Difficulty: Very Hard &middot; Recommended Level: 50+ &middot; Night Phase: 3+ &middot; Endgame Encounter</p>
+<p>The Phantom Council is technically a single boss but behaves like a multi-target encounter — three spectral council members take turns attacking while the others observe. The twist: the observing members can cast debuffs from the sidelines.</p>
+<p><strong>Key Weaknesses:</strong> <span class="tag-fire">Fire</span> and <span class="tag-holy">Holy</span>. Dark damage is resisted by all three members. Stance breaks on the active member interrupt the others' debuff casts.</p>
+<p><strong>Status Strategy:</strong> Poison is immune (spectral type). Bleed is normal. Stance breaks are critical — breaking the active member's stance causes a 3-second global stun on all three members.</p>
+<p><strong>Phase 1 (100-60% HP):</strong> The three members cycle in a fixed order: Sword → Staff → Bow. The Sword member is aggressive, the Staff member debuffs (slow + defense down), and the Bow member pelts you from range. Kill order: focus the Staff member first — removing the debuff source makes the fight dramatically easier.</p>
+<p><strong>Phase 2 (60-30% HP):</strong> The order becomes random. The members gain their second abilities — Sword gains a gap closer, Staff gains a damaging DoT debuff, Bow gains arrow volley (multi-target). Adapt to each member's new ability as they rotate in.</p>
+<p><strong>Phase 3 (Below 30% HP):</strong> All three members attack simultaneously for 10 seconds before returning to rotation. This is a pure DPS check. Use consumables, class skills, and Ashes of War liberally. If you survive the 10-second onslaught, the members are staggered for 6 seconds — unload everything.</p>
+<div class="strat-box"><strong>Recommended Build:</strong> Co-op is strongly recommended for this fight. If solo, the Duelist class with high mobility is the best choice — its dodge cooldown reduction lets you evade all three members simultaneously. Fire-infused weapons for bonus damage. For general progression strategy, see the <a class="inline-link" href="getting-started-guide.html">Beginner's Guide</a>.</div>
+</div>
+
+<h2>Element Damage Quick Reference</h2>
+
+<p>If you only remember a few rules from this guide, remember these:</p>
+
+<ol>
+<li><strong>Holy is the safest default:</strong> 5 out of 8 major bosses are weak to Holy. It is never resisted by any boss. If you can put a Holy infusion on your weapon, do it.</li>
+<li><strong>Dark is the riskiest:</strong> 3 bosses resist Dark, and only the Stormcaller is explicitly weak to it. Do not default to Dark without checking the table.</li>
+<li><strong>Fire is broadly effective:</strong> 4 bosses weak, only 2 resist. Fire is your backup element when Holy is unavailable — most builds can access some form of fire damage through consumables or infusions.</li>
+<li><strong>Stance breaks win hard fights:</strong> The Dusk Warden, Stormcaller, and Phantom Council all have fight-altering mechanics that stance breaks can cancel. If you are stuck on any of these three, spec into stance damage and watch the difficulty drop.</li>
+<li><strong>Bleed is the best universal status:</strong> Only the Stormcaller is immune to bleed. Every other major boss is neutral or vulnerable. Bleed procs scale with your weapon level, making it viable from early to late game.</li>
+</ol>
+
+<div class="key-tip">
+<strong>Pro Tip for New Players:</strong> Do not stress about optimizing elemental damage on your first Nightreign run. Unlike traditional Souls games, Nightreign's roguelike structure means you can experiment with different damage types across runs. Use your first few deaths to learn boss patterns. Use your subsequent runs to match elemental weaknesses. The <a class="inline-link" href="getting-started-guide.html">Getting Started Guide</a> has more tips for managing your first 10 runs efficiently.
+</div>
+
+<p>For class-specific build recommendations that match these weakness profiles, see the full <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a>. For step-by-step boss mechanics and common mistakes, read <a class="inline-link" href="boss-guide-common-pitfalls.html">How to Beat Every Main Boss</a>.</p>
+
+</div>
+</article>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">&#127942; Join the Discord</a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.</p>
+    </div>
+</footer>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="https://va.vercel-scripts.com/v1/va.min.js"></script>
+</body>
+</html>

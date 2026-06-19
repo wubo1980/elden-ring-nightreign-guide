@@ -39,4 +39,14 @@
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/boss-weakness-strategy-guide.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://elden-ring-nightreign-guide.vercel.app/articles/relic-build-guide.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

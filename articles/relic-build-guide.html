@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Relic Builds for Every Nightfarer Class — Elden Ring Nightreign</title>
+    <meta name="description" content="Complete relic build guide for Elden Ring Nightreign. Best relic setups for every Nightfarer class, updated for Patch 1.03.2. Solo and co-op builds with relic synergy analysis.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        :root { --bg: #0a0a12; --bg2: #12121f; --accent: #c9a84c; --accent2: #4a9eff; --text: #e8e4d9; --text-dim: #9990a0; --border: #2a2a3f; --tier-s: #c9a84c; --tier-a: #4a9eff; --tier-b: #6a6a8a; --tier-c: #8a4a4a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Crimson Text', Georgia, serif; font-size: 18px; line-height: 1.7; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent2); }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        nav { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; position: sticky; top: 0; z-index: 100; }
+        nav .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+        .nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 24px; list-style: none; }
+        .nav-links a { color: var(--text-dim); font-size: 15px; }
+        .nav-links a:hover { color: var(--accent); }
+        .article-header { padding: 60px 24px 40px; text-align: center; }
+        .article-header h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 4vw, 38px); font-weight: 900; color: var(--accent); line-height: 1.2; margin-bottom: 16px; }
+        .article-header .meta { color: var(--text-dim); font-size: 14px; }
+        .article-content { padding: 0 24px 60px; }
+        .article-content h2 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--accent); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .article-content h3 { font-family: 'Cinzel', serif; font-size: 18px; font-weight: 700; color: var(--text); margin: 28px 0 12px; }
+        .article-content p { margin-bottom: 18px; }
+        .article-content ul, .article-content ol { margin: 0 0 18px 24px; }
+        .article-content li { margin-bottom: 8px; }
+        .article-content strong { color: var(--accent2); font-weight: 600; }
+        .inline-link { font-weight: 600; }
+
+        .build-block { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 24px; margin: 28px 0; }
+        .build-block h3 { color: var(--accent); font-family: 'Cinzel', serif; font-size: 17px; margin-bottom: 8px; }
+        .build-block .class-tag { display: inline-block; font-size: 12px; font-weight: 700; font-family: 'Cinzel', serif; letter-spacing: 1px; padding: 3px 10px; border-radius: 2px; margin-bottom: 12px; }
+        .tag-solo { background: rgba(74,158,255,0.15); color: #4a9eff; border: 1px solid rgba(74,158,255,0.3); }
+        .tag-coop { background: rgba(74,255,100,0.15); color: #4aff64; border: 1px solid rgba(74,255,100,0.3); }
+        .tag-new { background: rgba(201,168,76,0.15); color: var(--accent); border: 1px solid rgba(201,168,76,0.3); }
+
+        .relic-card { background: #1a1a2e; border: 1px solid var(--border); border-radius: 4px; padding: 16px; margin: 16px 0; }
+        .relic-card h4 { color: var(--accent); font-family: 'Cinzel', serif; font-size: 15px; margin-bottom: 6px; }
+        .relic-card .relic-slot { font-size: 12px; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 8px; }
+        .relic-card .relic-effect { color: var(--text); font-size: 15px; }
+        .relic-card .relic-effect em { color: var(--text-dim); }
+
+        .synergy-box { border-left: 3px solid var(--accent); padding: 12px 16px; margin: 12px 0; border-radius: 0 2px 2px 0; }
+        .synergy-box strong { color: var(--accent); }
+        .key-tip { background: var(--bg2); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 24px 0; border-radius: 0 4px 4px 0; }
+        .key-tip strong { color: var(--accent); }
+
+        footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        .footer-discord { display: inline-flex; align-items: center; gap: 8px; background: #5865F2; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 24px; border-radius: 4px; margin-bottom: 24px; }
+        .footer-discord:hover { background: #4752C4; color: #fff; }
+        footer p { color: var(--text-dim); font-size: 14px; }
+        @media (max-width: 600px) { .nav-links { display: none; } }
+    </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5S7PJE4YG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-5S7PJE4YG4");
+</script>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-logo">Nightreign Guide</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="best-classes-tier-list.html">Classes</a></li>
+            <li><a href="boss-guide-common-pitfalls.html">Bosses</a></li>
+            <li><a href="nightreign-coop-multiplayer-guide.html">Co-op</a></li>
+            <li><a href="rune-levelling-fast-guide.html">Runes</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="article-header">
+    <div class="container">
+        <h1>Best Relic Builds for Every Nightfarer Class</h1>
+        <div class="meta">Relic Synergies &middot; Solo &amp; Co-op Setups &middot; Patch 1.03.2 Updated &middot; June 2026</div>
+    </div>
+</header>
+
+<article class="article-content">
+<div class="container">
+<img src="../images/elden-ring-night-landscape.png" alt="Elden Ring Nightreign relic build guide for Nightfarer classes" style="width:100%;margin-bottom:24px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.5);">
+
+<p>Relics are Nightreign's most impactful build decision. Unlike weapons and spells that you find during a run, your relic selection happens before you enter — and it determines the entire trajectory of your build. Pick the right relic and your run becomes smooth sailing. Pick the wrong one and you will spend the whole fight wishing you had respecced at the Roundtable Hold vendor.</p>
+
+<p>This guide covers every Nightfarer class with optimal relic setups for both solo and co-op play, updated for the Patch 1.03.2 balance changes. If you are new to Nightreign, start with the beginner-friendly builds marked with <span class="tag-new">New Player</span>.</p>
+
+<div class="key-tip">
+<strong>Relic Basics:</strong> Each Nightfarer class has three relic slots: <strong>Primary</strong> (class-specific, major modifier), <strong>Secondary</strong> (stat buffs), and <strong>Utility</strong> (passive effects). You unlock your second relic slot at level 25 and the third at level 50. The builds below assume all three slots are available, but we note the priority order for players still leveling up.
+</div>
+
+<h2>Raider Builds &mdash; Patch 1.03.2 Updated</h2>
+
+<p>The Raider received the largest buffs in Patch 1.03.2 (<a class="inline-link" href="deep-of-night-patch-1-0-3-2.html">Deep of Night</a>) and is now a top-tier melee class. Builds below reflect the new Vanguard Momentum passive and Breakthrough Charge skill.</p>
+
+<div class="build-block">
+<h3>Raider — Unstoppable Momentum (Solo S-Tier)</h3>
+<span class="class-tag tag-solo">Solo</span> <span class="class-tag tag-new">New Player</span>
+<p>This build maximizes the new Vanguard Momentum passive. The goal is to maintain max momentum stacks (5 stacks, 15% attack speed) through aggressive combat, using the increased speed to land more hits and sustain the loop.</p>
+
+<div class="relic-card">
+    <h4>Relic of the Vanguard</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">Momentum stacks last 1.5s longer before decay. At 5 stacks, light attacks deal +10% bonus damage. <em>— Essential for this build. Without it, keeping momentum stacks up between enemy packs is inconsistent.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Ogre's Grip</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Stance damage +20%. +5% physical damage. <em>— Synergizes with Breakthrough Charge (200% stance damage on impact). Combined, a charged heavy into Breakthrough Charge stance-breaks most elites in 2 hits.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Warrior's Recovery</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">Killing an enemy restores 3% HP. Elites restore 8%. <em>— Sustain is the Raider's weakness. This relic turns every packed room into a healing opportunity.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Playstyle:</strong> Open with Breakthrough Charge to close distance and stance break. Follow up with light attacks to build momentum. At 5 stacks, weave in charged heavies for maximum damage per safe window. Against bosses, use Breakthrough Charge to interrupt dangerous attacks — the 12s cooldown (reduced from 18s in 1.03.2) means you can use it 3-4 times per fight.</div>
+</div>
+
+<div class="build-block">
+<h3>Raider — Raid Frontliner (Co-op S-Tier)</h3>
+<span class="class-tag tag-coop">Co-op</span>
+<p>In co-op, the Raider's role is clear: break posture, create openings, and hold aggro. This build shifts relic focus from personal DPS to team utility and survivability.</p>
+
+<div class="relic-card">
+    <h4>Bastion's Crest</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">While holding aggro of 2+ enemies, damage reduction +15%. Teammates within 15m gain +8% damage. <em>— The team damage buff is the key value. Position yourself between the enemy and your ranged teammates.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Bellwether's Toll</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Breakthrough Charge cooldown reduced by 4s. On impact, taunts nearby enemies for 5s. <em>— The taunt effect lets you control engagement. Pull enemies off your squishier teammates on demand.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Life Leech Shard</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">5% of damage dealt returns as HP. +50 max HP. <em>— Essential sustain for prolonged Raid encounters.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Synergy:</strong> Pair this Raider with an Executor using Mark of the Hunt. The 15% damage increase from Mark of the Hunt combined with Bastion's Crest 8% team buff creates a 23% net DPS increase for your co-op squad — the strongest two-class synergy in the current meta.</div>
+</div>
+
+<h2>Executor Builds &mdash; Patch 1.03.2 Updated</h2>
+
+<p>The Executor's rework — including the 45% execute threshold and new Mark of the Hunt skill — makes it the premier damage amplifier class. The builds below leverage its new tools.</p>
+
+<div class="build-block">
+<h3>Executor — Hunt Leader (Co-op S-Tier)</h3>
+<span class="class-tag tag-coop">Co-op</span>
+<p>This build focuses entirely on Mark of the Hunt uptime and execute efficiency. You are the team's damage catalyst — your personal damage matters less than the team-wide buff you provide.</p>
+
+<div class="relic-card">
+    <h4>Token of the Hunt</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">Mark of the Hunt duration +5s (20s &rarr; 25s). Marked targets take an additional 5% damage from all sources. <em>— Extending the 15% damage buff to 20% for the full duration is enormous value in boss fights.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Finisher's Edge</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Execute threshold +5% (45% &rarr; 50%). Execute kills reset Mark of the Hunt cooldown. <em>— The cooldown reset lets you chain Marks back-to-back in multi-target encounters.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Swiftfoot Boots</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">Ranged attack speed +8%. Dodge roll distance +5%. <em>— Keeps you in the optimal mid-range position for consistent Mark application and ranged executes.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Playstyle:</strong> Apply Mark of the Hunt on the highest-priority target (usually the boss or tankiest elite). Weave in ranged attacks to build FP for refreshing the mark. When a marked target drops below 50% HP, prioritize it — the execute kill reset lets you immediately mark the next target. In Raids, mark each phase boss as soon as it becomes active.</div>
+</div>
+
+<div class="build-block">
+<h3>Executor — Solo Hunter (Solo A-Tier)</h3>
+<span class="class-tag tag-solo">Solo</span>
+<p>For solo play, the Executor needs more self-sufficiency. This build sacrifices some of the team utility for personal damage and survival.</p>
+
+<div class="relic-card">
+    <h4>Shadow's Mantle</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">Enemies below 45% HP take 15% increased damage from you. Critical hit rate +5%. <em>— The execute synergy turns the Executor into a strong finisher even without a dedicated team.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Heart of the Night</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Max HP +15%. When below 30% HP, gain +25% damage for 8s (cooldown: 45s). <em>— The emergency damage spike can turn unwinnable fights around in solo play.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Runic Overflow</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">Rune gain +20%. +10% FP recovery rate. <em>— Faster leveling in solo runs means you hit the execute power spike earlier.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Note:</strong> The Executor is noticeably weaker in solo compared to co-op due to the team-reliant execute mechanic. If you primarily play solo, consider the Raider or Duelist instead — the Executor shines brightest with a squad. See the <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a> for the full solo ranking.</div>
+</div>
+
+<h2>Paladin Builds</h2>
+
+<p>The Paladin is the strongest support class in Nightreign and one of the most forgiving classes for solo play due to its built-in healing.</p>
+
+<div class="build-block">
+<h3>Paladin — Holy Anchor (Solo A-Tier / Co-op A-Tier)</h3>
+<span class="class-tag tag-solo">Solo</span> <span class="class-tag tag-coop">Co-op</span> <span class="class-tag tag-new">New Player</span>
+<p>This build works equally well in solo and co-op thanks to the Paladin's self-sufficiency. It focuses on holy damage output (which is the most broadly effective element against Nightreign bosses) and survivability.</p>
+
+<div class="relic-card">
+    <h4>Seal of Sanctity</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">Holy damage +20%. Healing spells restore an additional 10% HP. <em>— The +20% holy damage is the highest elemental damage boost in the game from a single relic.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Martyr's Bulwark</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Blocking an attack restores 2% FP. Blocking a heavy attack restores 5% FP. <em>— This solves the Paladin's FP management problem. In longer boss fights, FP starvation is the most common death cause.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Sacred Ground</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">Standing still for 2s creates a small holy AoE that heals 1% HP per second (max 5m radius). <em>— Excellent for boss fight downtimes and between encounter waves in Raids.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Why It Works:</strong> The Paladin's holy damage shines against the Dusk Warden, Grave Sentinel, Crimson Wyrm, and Abyssal Knight — four of the toughest bosses in the game. If you have not decided on a main class, the Paladin is the strongest generalist choice for learning boss patterns while maintaining pressure.</div>
+</div>
+
+<h2>Duelist Builds</h2>
+
+<p>The Duelist is the highest skill-ceiling class with the fastest attack speed and best dodge cooldowns. It excels in solo play where its high mobility lets it control engagement.</p>
+
+<div class="build-block">
+<h3>Duelist — Ghost Blade (Solo S-Tier)</h3>
+<span class="class-tag tag-solo">Solo</span>
+<p>The Duelist's identity is hit-and-run skirmishing. This build doubles down on mobility and critical damage, turning the Duelist into a surgical damage dealer.</p>
+
+<div class="relic-card">
+    <h4>Dancer's Grace</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">Dodge cooldown -15%. After a perfect dodge, next attack deals +30% crit damage. <em>— Perfect dodges are the Duelist's core mechanic. This relic rewards the highest-skill play pattern with massive burst windows.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Critical Edge</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Crit rate +8%. Crit damage +10%. <em>— Combined with Dancer's Grace, your perfect-dodge follow-up attacks hit for roughly 2.5x normal damage.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Wind Stalker</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">+5% movement speed. +10% attack speed when below 50% HP. <em>— Speed is survival for the Duelist. Every extra bit of mobility keeps you out of the damage zone.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Skill Requirement:</strong> This build is only as good as your dodge timing. If you are still learning boss patterns, consider the Paladin first. The Duelist's value comes from exploiting openings that other classes cannot safely reach. For phase-specific dodge timing, see the <a class="inline-link" href="boss-guide-common-pitfalls.html">Boss Guide</a>.</div>
+</div>
+
+<h2>Conjurer Builds</h2>
+
+<p>The Conjurer is Nightreign's dedicated caster class. It struggles against fast-moving bosses but dominates stationary targets and crowd situations.</p>
+
+<div class="build-block">
+<h3>Conjurer — Arcane Storm (Co-op S-Tier)</h3>
+<span class="class-tag tag-coop">Co-op</span>
+<p>In co-op, the Conjurer can free-cast while the frontline holds aggro. This build maximizes sustained spell output and mana recovery.</p>
+
+<div class="relic-card">
+    <h4>Channeller's Crown</h4>
+    <div class="relic-slot">Primary Slot</div>
+    <div class="relic-effect">Spell damage +12%. Spell casting speed +10%. Channeled spells cost 20% less FP. <em>— The 20% FP reduction on channeled spells is the highlight. You can maintain close to 100% uptime on your main damage spell.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Arcane Font</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">FP recovery +25%. Killing a spell-affected enemy restores 5% FP. <em>— In room-clearing scenarios, this keeps your FP topped up indefinitely.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Crystal Memory</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">+1 spell slot (total 5). Spells cost 5% less FP. <em>— The extra spell slot gives you room for a utility spell (like a shield or debuff) without sacrificing damage.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Best Partner:</strong> Pair with the Raider (Bastion's Crest build). The Raider holds aggro, giving you clear sightlines for channeling. The Conjurer handles crowd packs while the Raider focuses elites. Against bosses, the Conjurer applies consistent elemental pressure while the Raider stance-breaks for burst windows.</div>
+</div>
+
+<h2>Best Beginner Relic Setup</h2>
+
+<p>If you are brand new to Nightreign and just want a build that works without reading spreadsheets:</p>
+
+<div class="build-block">
+<h3>Universal Beginner Build &mdash; Any Class</h3>
+<span class="class-tag tag-new">New Player</span>
+
+<div class="relic-card">
+    <h4>Survivor's Pendant</h4>
+    <div class="relic-slot">Primary Slot (Best Generic)</div>
+    <div class="relic-effect">Max HP +10%. All healing received +15%. Revive speed -20%. <em>— This relic is not flashy, but it prevents more runs from dying than any other relic in the game.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Wanderer's Fortune</h4>
+    <div class="relic-slot">Secondary Slot</div>
+    <div class="relic-effect">Rune gain +15%. Item discovery +10%. <em>— Faster progression = more options. Good for any class, any playstyle.</em></div>
+</div>
+
+<div class="relic-card">
+    <h4>Sturdy Step</h4>
+    <div class="relic-slot">Utility Slot</div>
+    <div class="relic-effect">Poise +10. Stagger recovery speed +15%. <em>— Getting knocked down is the #1 cause of new players losing to boss combos. This relic reduces stunlock scenarios significantly.</em></div>
+</div>
+
+<div class="synergy-box"><strong>Why This Works:</strong> This set has no class-specific requirements and provides the three things new players need most: survival, progression speed, and crowd control resistance. It works on any class and any run configuration. As you learn the game, swap these out for class-specific relics.</div>
+</div>
+
+<h2>Relic Farming &amp; Acquisition Guide</h2>
+
+<p>Relics are earned through progression, not random drops. Here is where to get each tier:</p>
+
+<ul>
+<li><strong>Common Relics:</strong> Unlocked by default. Found in chests during any run. The Survivor's Pendant and Wanderer's Fortune are common — you should have them immediately.</li>
+<li><strong>Uncommon Relics:</strong> Earned by defeating Night bosses (20% chance). Also available at the Roundtable vendor for 3 Dusk Tokens (earned in Raids since Patch 1.03.2). Includes Dancer's Grace, Ogre's Grip, Finisher's Edge.</li>
+<li><strong>Rare Relics:</strong> Nightlord kills (guaranteed drop). The Dusk Warden drops the Token of the Hunt and Seal of Sanctity. These are the build-defining relics.</li>
+<li><strong>Legendary Relics:</strong> Nightmare Gauntlet completion (introduced in Patch 1.03.2). The Channeller's Crown and Bastion's Crest are exclusive to this mode.</li>
+</ul>
+
+<div class="key-tip">
+<strong>Farming Tip:</strong> The fastest way to build your relic collection is to run Night 1-2 phases repeatedly. A full Night 1-2 cycle takes ~15 minutes and has a high chance of spawning a Night boss. Focus on the bosses your current build can handle consistently, then use the collected relics to tackle harder content. See the <a class="inline-link" href="rune-levelling-fast-guide.html">Rune Farming Guide</a> for optimal run routes.
+</div>
+
+<p>For class rankings and recommended playstyles independent of relic setup, see the full <a class="inline-link" href="best-classes-tier-list.html">Classes Tier List</a>. For a complete elemental weakness reference to match your relic build against specific bosses, read the <a class="inline-link" href="boss-weakness-strategy-guide.html">All Boss Weaknesses Guide</a>.</p>
+
+</div>
+</article>
+
+<footer>
+    <div class="container">
+        <a href="https://discord.gg/RnGBR4Xe2e" target="_blank" rel="noopener" class="footer-discord">&#127942; Join the Discord</a>
+        <p>&copy; 2026 Elden Ring Nightreign Guide. Not affiliated with FromSoftware or Bandai Namco.</p>
+    </div>
+</footer>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="https://va.vercel-scripts.com/v1/va.min.js"></script>
+</body>
+</html>
